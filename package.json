@@ -1,0 +1,38 @@
+{
+  "name": "react-spring-pan-zoom",
+  "version": "0.1.0",
+  "description": "Pan and zoom for any element",
+  "main": "src/lib/index.js",
+  "module": "src/lib/index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "Mehdi Vasigh",
+  "license": "MIT",
+  "homepage": "https://github.com/mvasigh/react-image-markup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvasigh/react-image-markup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mvasigh/react-image-markup/issues"
+  },
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-spring": "^8.0.19",
+    "react-use-gesture": "^5.0.0"
+  }
+}
