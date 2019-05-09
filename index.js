@@ -9,11 +9,14 @@ const Box = () => (
       width: '600px',
       height: '600px',
       display: 'flex',
+      fontFamily: 'sans-serif',
+      fontSize: '1.4rem',
       justifyContent: 'center',
       alignItems: 'center',
       background: 'salmon',
       color: 'white',
-      textAlign: 'center'
+      textAlign: 'center',
+      userSelect: 'none'
     }}
   >
     Click and drag to pan me around! <br />
@@ -24,7 +27,17 @@ const Box = () => (
 const App = props => {
   return (
     <Panzoom maxZoom={2} minZoom={0.2}>
-      <Box />
+      <div
+        style={{
+          height: '100vh',
+          width: '100vw',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Box />
+      </div>
     </Panzoom>
   );
 };
