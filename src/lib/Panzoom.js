@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { animated } from 'react-spring';
 import { usePanzoom, transform } from './usePanzoom';
 
-const Panzoom = ({ children, maxZoom = 8, minZoom = 0.2 }) => {
+const Panzoom = ({ children, paused = false, maxZoom = 8, minZoom = 0.2 }) => {
   const [spring, { pan, zoom, panzoom }] = usePanzoom({ minZoom, maxZoom });
+
+  const bind = paused ? {} : { ...panzoom() };
 
   return (
     <div
@@ -13,7 +15,7 @@ const Panzoom = ({ children, maxZoom = 8, minZoom = 0.2 }) => {
         height: '100vh',
         width: '100vw'
       }}
-      {...panzoom()}
+      {...bind}
     >
       <animated.div
         style={{
