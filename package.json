@@ -2,10 +2,14 @@
   "name": "react-spring-pan-zoom",
   "version": "0.1.0",
   "description": "Pan and zoom for any element",
-  "main": "src/lib/index.js",
-  "module": "src/lib/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "dev": "parcel index.html",
+    "build": "rollup -c rollup.config.js",
+    "release": "yarn build && release --src=build --push",
+    "release:major": "yarn release - --major",
+    "release:minor": "yarn release - --minor",
+    "release:patch": "yarn release - --patch"
   },
   "author": "Mehdi Vasigh",
   "license": "MIT",
@@ -18,10 +22,17 @@
     "url": "https://github.com/mvasigh/react-image-markup/issues"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
     "husky": "^2.2.0",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0"
+    "pretty-quick": "^1.10.0",
+    "rollup": "^1.12.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0"
   },
   "husky": {
     "hooks": {

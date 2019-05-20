@@ -60,6 +60,9 @@ typings/
 # next.js build output
 .next
 
-# parcel build output
+# Parcel build output
 .cache
 dist
+
+# Rollup build output
+build
