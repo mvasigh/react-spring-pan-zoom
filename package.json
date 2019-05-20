@@ -1,6 +1,6 @@
 {
   "name": "react-spring-pan-zoom",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Pan and zoom for any element",
   "main": "index.js",
   "scripts": {
